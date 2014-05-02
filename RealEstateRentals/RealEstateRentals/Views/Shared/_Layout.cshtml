@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+    <title>@ViewBag.Title – Mobile Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     @Styles.Render("~/Content/Mobilecss")
+    @Scripts.Render("~/bundles/Mobilejs")
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </head>
+        <body>
+             <div data-role="page" data-theme="a">
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <div data-role="navbar" data-theme="a" data-iconpos="top">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")" data-icon="home">Home</a></li>
+                <li><a href="@Url.Action("Index",  "ListingDetail")" data-icon="check">Add Listing</a></li>                    
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+            
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+         </div>
+                 
+</div>
+        </body>
+    </html>
